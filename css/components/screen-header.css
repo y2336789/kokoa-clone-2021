@@ -4,6 +4,7 @@
   align-items: center;
   padding: var(--horizontal-space);
   padding-top: 40px;
+  margin-bottom: 15px;
 }
 
 .screen-header__title {
@@ -13,4 +14,27 @@
 
 .screen-header__icons span {
   margin-left: 25px;
+}
+
+.screen-header__dot {
+  background-color: tomato;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  right: 15px;
+  top: 40px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 1s linear infinite;
 }
